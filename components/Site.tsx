@@ -25,14 +25,21 @@ function Photo({ src, alt, className = "" }: { src: string; alt: string; classNa
 const nav = [["Home","#home"],["About","#about"],["Services","#services"],["Workshop","#workshop"],["Gallery","#gallery"],["Contact","#contact"]];
 
 function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    const closeMenu = (event: KeyboardEvent) => { if (event.key === "Escape") setMenuOpen(false); };
+    addEventListener("keydown", closeMenu);
+    return () => removeEventListener("keydown", closeMenu);
+  }, []);
   const { scrollY } = useScroll(); const y = useTransform(scrollY, [0, 700], [0, 120]);
   return (
     <section id="home" className="hero">
       <motion.div className="hero-bg" style={{ y }}><Photo src={img.hero} alt="Premium automotive workshop with a vehicle and open bonnet" /></motion.div>
       <div className="hero-shade" />
       <header className="top"><a href="#home" className="logo">JHANSI <span>AUTOMOBILES</span></a>
-        <nav>{nav.map(([n, h]) => <a key={n} href={h}>{n}</a>)}</nav>
-        <a className="btn ghost sm" href={tel}><PhoneIcon />{c.phone}</a></header>
+        <nav id="primary-navigation" aria-label="Main navigation" className={menuOpen ? "is-open" : ""}>{nav.map(([n, h]) => <a key={n} href={h} onClick={() => setMenuOpen(false)}>{n}</a>)}<a className="mobile-call" href={tel}><PhoneIcon />{c.phone}</a></nav>
+        <a className="btn ghost sm header-call" href={tel}><PhoneIcon />{c.phone}</a>
+        <button type="button" className="menu-toggle" aria-expanded={menuOpen} aria-controls="primary-navigation" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button></header>
       <div className="wrap hero-in">
         <motion.p className="kicker" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .2 }}>15 YEARS OF AUTOMOTIVE EXPERIENCE</motion.p>
         <motion.h1 className="hero-title" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .9, delay: .35 }}>
@@ -85,7 +92,7 @@ function Gallery() {
     <div className="gal">{gallery.map((g, i) => <button key={g.title} onClick={() => setO(i)} aria-label={`Open ${g.title}`}><Photo src={g.src} alt={g.title} /><span>{g.title}</span></button>)}</div></div>
     {o !== null && <div className="lb" role="dialog" aria-modal onClick={() => setO(null)}>
       <button className="x" aria-label="Close">×</button><button className="nv l" aria-label="Previous" onClick={e => { e.stopPropagation(); setO((o + gallery.length - 1) % gallery.length); }}>‹</button>
-      <div onClick={e => e.stopPropagation()}><Photo src={gallery[o].src} alt={gallery[o].title} className="lb-img" /><p>{gallery[o].title}</p></div>
+      <div className="lb-content" onClick={e => e.stopPropagation()}><Photo src={gallery[o].src} alt={gallery[o].title} className="lb-img" /><p>{gallery[o].title}</p></div>
       <button className="nv r" aria-label="Next" onClick={e => { e.stopPropagation(); setO((o + 1) % gallery.length); }}>›</button></div>}</section>);
 }
 
