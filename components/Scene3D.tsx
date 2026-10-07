@@ -22,7 +22,7 @@ function Disc() {
         return <mesh key={i} position={[Math.cos(a) * 0.65, 0.2, Math.sin(a) * 0.65]} rotation={[X, 0, 0]}><cylinderGeometry args={[0.09, 0.09, 0.82, 20]} /><meshStandardMaterial color="#111" metalness={0.6} roughness={0.6} /></mesh>; })}
       {Array.from({ length: 24 }).map((_, i) => { const a = (i / 24) * Math.PI * 2;
         return <mesh key={i} position={[Math.cos(a) * 1.55, 0, Math.sin(a) * 1.55]} rotation={[X, 0, 0]}><cylinderGeometry args={[0.07, 0.07, 0.3, 16]} /><meshStandardMaterial color="#0b0b0c" /></mesh>; })}
-      <mesh rotation={[X, 0, 0]}><torusGeometry args={[2, 0.025, 12, 96]} /><meshStandardMaterial color="#f59e0b" emissive="#f59e0b" emissiveIntensity={0.6} /></mesh>
+      <mesh rotation={[X, 0, 0]}><torusGeometry args={[2, 0.025, 12, 96]} /><meshStandardMaterial color="#e53935" emissive="#e53935" emissiveIntensity={0.6} /></mesh>
     </group>
   );
 }
@@ -30,10 +30,10 @@ export default function Scene3D() {
   return (
     <Canvas camera={{ position: [0, 0, 6], fov: 40 }} dpr={[1, 1.75]}>
       <ambientLight intensity={0.15} />
-      <pointLight position={[3, 2, 3]} intensity={30} color="#f59e0b" />
+      <pointLight position={[3, 2, 3]} intensity={30} color="#e53935" />
       <Environment resolution={256}>
         <Lightformer form="rect" intensity={4} position={[0, 5, 2]} scale={[8, 2, 1]} />
-        <Lightformer form="rect" intensity={2} color="#ffb347" position={[-5, 0, 2]} scale={[2, 6, 1]} />
+        <Lightformer form="rect" intensity={2} color="#ff5a52" position={[-5, 0, 2]} scale={[2, 6, 1]} />
       </Environment>
       <Disc />
     </Canvas>

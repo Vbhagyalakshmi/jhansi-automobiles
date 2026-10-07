@@ -1,36 +1,66 @@
 // Single source of truth for business details. Edit here only.
 export const siteConfig = {
   businessName: "Jhansi Automobiles Engineering Works",
-  experience: "15 Years",
+  experience: "30+ Years",
   phone: "9396296001",
   email: "sanyasiraovipparthi2607@gmail.com",
-  address: "[ADD BUSINESS ADDRESS]",
-  businessHours: "[ADD BUSINESS HOURS]",
+  address:
+    "37-6-3, Satya Nagar, Manchukonda Gardens, Murali Nagar, Visakhapatnam - 530007 (Opposite the 5th Town Police Station), Andhra Pradesh.",
+  businessHours: "Monday – Saturday: 9:00 AM – 8:00 PM; Sunday: Closed",
   url: "https://example.com", // TODO: replace with the real domain
 };
+
+// Structured parts of the address above, used for schema.org data.
+export const addressParts = {
+  streetAddress: "37-6-3, Satya Nagar, Manchukonda Gardens, Murali Nagar (Opposite the 5th Town Police Station)",
+  addressLocality: "Visakhapatnam",
+  postalCode: "530007",
+  addressRegion: "Andhra Pradesh",
+  addressCountry: "IN",
+};
+
+export const hours = [
+  { days: "Monday – Saturday", time: "9:00 AM – 8:00 PM" },
+  { days: "Sunday", time: "Closed" },
+];
+
 export const tel = `tel:${siteConfig.phone}`;
 export const mailto = `mailto:${siteConfig.email}`;
+export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.address)}`;
 export const whatsappUrl = (message: string) =>
   `https://wa.me/91${siteConfig.phone}?text=${encodeURIComponent(message)}`;
 export const serviceEnquiryMessage =
   "Hello Jhansi Automobiles Engineering Works, I would like to book a service. Please share the available service options and appointment details.";
-export const bookingWhatsappUrl =
-  "https://wa.me/919396296001?text=Hello%20Jhansi%20Automobiles%20Engineering%20Works%2C%20I%20would%20like%20to%20book%20a%20service.%20Please%20share%20the%20available%20service%20options%20and%20appointment%20details.";
+export const bookingWhatsappUrl = whatsappUrl(serviceEnquiryMessage);
 
-// Drop photos into /public/images using these names. Missing files fall back to a dark placeholder panel.
-export const img = { hero: "/images/hero-workshop.png", about: "/images/about-workshop.jpg" };
-export const services = [
-  ["General Car Service","workshop/periodic-maintenance.webp","Routine servicing to keep your vehicle running reliably."],
-  ["Engine Diagnostics","workshop/engine-diagnostics.jpeg","Systematic checks to find the cause of engine and performance issues."],
-  ["Engine Repair","workshop/engine-repair.jpeg","Mechanical repair work carried out with an engineering mindset."],
-  ["Brake Service","workshop/brake-service.jpeg","Inspection and servicing of brake components and braking performance."],
-  ["Suspension & Steering","workshop/brake-service.jpeg","Checks and repairs for ride comfort, handling and steering response."],
-  ["AC & Climate Service","workshop/ac-service.jpeg","Service and repair for in-car cooling and climate systems."],
-  ["Electrical & Battery","workshop/dashboard-electrical-repair.jpeg","Battery, wiring and electrical system inspection and repair."],
-  ["Periodic Maintenance","workshop/periodic-maintenance.webp","Scheduled maintenance to prevent small issues becoming big ones."],
-  ["Mechanical Engineering","workshop/engine-block.jpeg","Engineering solutions for mechanical problems beyond routine repair."],
-  ["Vehicle Inspection","workshop/service-bay.webp","A thorough check of your vehicle's condition and what needs attention."],
+export const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Workshop", href: "/workshop" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
 ] as const;
+
+export const img = {
+  logo: "/images/logo.png",
+  hero: "/images/hero-workshop.png",
+  about: "/images/workshop/workshop-interior.webp",
+};
+
+export const services = [
+  { slug: "general-car-service", title: "General Car Service", image: "/images/workshop/periodic-maintenance.webp", description: "Routine servicing to keep your vehicle running reliably." },
+  { slug: "engine-diagnostics", title: "Engine Diagnostics", image: "/images/workshop/engine-diagnostics.jpeg", description: "Systematic checks to find the cause of engine and performance issues." },
+  { slug: "engine-repair", title: "Engine Repair", image: "/images/workshop/engine-repair.jpeg", description: "Mechanical repair work carried out with an engineering mindset." },
+  { slug: "brake-service", title: "Brake Service", image: "/images/workshop/brake-service.jpeg", description: "Inspection and servicing of brake components and braking performance." },
+  { slug: "suspension-steering", title: "Suspension & Steering", image: "/images/workshop/brake-service.jpeg", description: "Checks and repairs for ride comfort, handling and steering response." },
+  { slug: "ac-climate-service", title: "AC & Climate Service", image: "/images/workshop/ac-service.jpeg", description: "Service and repair for in-car cooling and climate systems." },
+  { slug: "electrical-battery", title: "Electrical & Battery", image: "/images/workshop/dashboard-electrical-repair.jpeg", description: "Battery, wiring and electrical system inspection and repair." },
+  { slug: "periodic-maintenance", title: "Periodic Maintenance", image: "/images/workshop/periodic-maintenance.webp", description: "Scheduled maintenance to prevent small issues becoming big ones." },
+  { slug: "mechanical-engineering", title: "Mechanical Engineering", image: "/images/workshop/engine-block.jpeg", description: "Engineering solutions for mechanical problems beyond routine repair." },
+  { slug: "vehicle-inspection", title: "Vehicle Inspection", image: "/images/workshop/service-bay.webp", description: "A thorough check of your vehicle's condition and what needs attention." },
+] as const;
+
 export const gallery = [
   { title: "Workshop exterior", src: "/images/workshop/workshop-exterior.webp" },
   { title: "Workshop interior", src: "/images/workshop/workshop-interior.webp" },
