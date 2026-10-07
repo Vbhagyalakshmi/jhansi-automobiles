@@ -16,7 +16,7 @@ export default function WorkshopVisual() {
   return (
     <div className="stage" aria-hidden="true">
       {big ? <Scene3D /> : (
-        <svg className="fallback" viewBox="0 0 200 200" fill="none" stroke="#F59E0B">
+        <svg className="fallback" viewBox="0 0 200 200" fill="none" stroke="#E53935">
           <circle cx="100" cy="100" r="80" strokeWidth="6" /><circle cx="100" cy="100" r="30" strokeWidth="4" />
           {Array.from({ length: 12 }).map((_, i) => <circle key={i} cx={100 + 62 * Math.cos(i * Math.PI / 6)} cy={100 + 62 * Math.sin(i * Math.PI / 6)} r="3" />)}
         </svg>

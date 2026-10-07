@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { navLinks, tel, mailto, mapsUrl, hours, img, siteConfig as c } from "@/lib/site-config";
-import { PhoneIcon, MailIcon, PinIcon } from "./icons";
+import { navLinks, img, siteConfig as c } from "@/lib/site-config";
 
 export default function Footer() {
   return (
@@ -17,20 +16,6 @@ export default function Footer() {
           <nav aria-label="Footer navigation" className="foot-nav">
             {navLinks.map(({ label, href }) => <Link key={href} href={href}>{label}</Link>)}
           </nav>
-        </div>
-        <div>
-          <h2 className="foot-h">Contact</h2>
-          <a className="btn dark sm" href={tel}><PhoneIcon />CONTACT US</a>
-          <ul className="foot-list">
-            <li><MailIcon className="meta-icon" /><a href={mailto}>{c.email}</a></li>
-            <li><PinIcon /><a href={mapsUrl} target="_blank" rel="noopener noreferrer">{c.address}</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="foot-h">Business Hours</h2>
-          <dl className="hours">
-            {hours.map((h) => <div key={h.days}><dt>{h.days}</dt><dd>{h.time}</dd></div>)}
-          </dl>
         </div>
       </div>
       <p className="copy">© 2026 {c.businessName}. All Rights Reserved.</p>

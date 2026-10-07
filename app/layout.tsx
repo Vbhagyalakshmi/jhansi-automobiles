@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, IBM_Plex_Sans } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { siteConfig, addressParts } from "@/lib/site-config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const head = Barlow_Condensed({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--f-head" });
-const body = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--f-body" });
+const head = Montserrat({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-head" });
+const body = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-body" });
 
 const title = "Jhansi Automobiles Engineering Works | Automobile Service & Engineering";
 const description =
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title, description, images: ["/images/hero-workshop.png"] },
 };
 
-export const viewport: Viewport = { themeColor: "#F59E0B", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#0B0F14", width: "device-width", initialScale: 1 };
 
 const ld = {
   "@context": "https://schema.org",
