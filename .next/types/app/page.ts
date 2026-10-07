@@ -1,4 +1,4 @@
-// File: C:\Users\cadav\Downloads\jhansi-automobiles-site\jhansi-site\app\page.tsx
+// File: /vercel/share/v0-project/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
