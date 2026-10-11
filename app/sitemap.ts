@@ -1,10 +1,10 @@
+import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
-export default function sitemap() {
-  const lastModified = new Date("2026-10-11T00:00:00.000Z");
+const publicRoutes = ["/", "/about", "/services", "/workshop", "/gallery", "/contact"] as const;
 
-  return ["/", "/about", "/services", "/workshop", "/gallery", "/contact"].map((path) => ({
+export default function sitemap(): MetadataRoute.Sitemap {
+  return publicRoutes.map((path) => ({
     url: new URL(path, siteConfig.url).toString(),
-    lastModified,
   }));
 }
