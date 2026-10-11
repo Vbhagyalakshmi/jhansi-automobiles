@@ -6,9 +6,18 @@ import { PhoneIcon, WhatsAppIcon } from "@/components/icons";
 import { services, tel, whatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Car servicing, engine diagnostics, engine repair, brakes, suspension, AC, electrical and mechanical engineering services in Visakhapatnam — 30+ years of experience.",
+  title: "Automobile Services & Repairs",
+  description: "Explore car servicing, engine diagnostics and repair, brakes, suspension, AC, electrical and mechanical engineering services in Visakhapatnam.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Automobile Services & Repairs",
+    description: "Explore car servicing, engine diagnostics and repair, brakes, suspension, AC, electrical and mechanical engineering services in Visakhapatnam.",
+    url: "/services",
+  },
+  twitter: {
+    title: "Automobile Services & Repairs",
+    description: "Explore car servicing, engine diagnostics and repair, brakes, suspension, AC, electrical and mechanical engineering services in Visakhapatnam.",
+  },
 };
 
 export default function ServicesPage() {

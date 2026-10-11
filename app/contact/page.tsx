@@ -5,9 +5,18 @@ import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
 import { siteConfig as c, tel, mailto, mapsUrl, hours, bookingWhatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Our Workshop",
   description: "Contact Jhansi Automobiles Engineering Works, Satya Nagar, Murali Nagar, Visakhapatnam. Open Monday – Saturday, 9:00 AM – 8:00 PM.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Our Workshop",
+    description: "Contact Jhansi Automobiles Engineering Works, Satya Nagar, Murali Nagar, Visakhapatnam. Open Monday – Saturday, 9:00 AM – 8:00 PM.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact Our Workshop",
+    description: "Contact Jhansi Automobiles Engineering Works, Satya Nagar, Murali Nagar, Visakhapatnam. Open Monday – Saturday, 9:00 AM – 8:00 PM.",
+  },
 };
 
 export default function ContactPage() {

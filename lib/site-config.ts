@@ -7,7 +7,7 @@ export const siteConfig = {
   address:
     "37-6-3, Satya Nagar, Manchukonda Gardens, Murali Nagar, Visakhapatnam - 530007 (Opposite the 5th Town Police Station), Andhra Pradesh.",
   businessHours: "Monday – Saturday: 9:00 AM – 8:00 PM; Sunday: Closed",
-  url: "https://example.com", // TODO: replace with the real domain
+  url: "https://www.jhansiengineeringworks.in",
 };
 
 // Structured parts of the address above, used for schema.org data.

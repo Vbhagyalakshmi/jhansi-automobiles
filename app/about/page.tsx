@@ -7,9 +7,18 @@ import { ArrowIcon, PhoneIcon } from "@/components/icons";
 import { siteConfig as c, img, tel } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "About Jhansi Automobiles Engineering Works, Visakhapatnam — 30+ years of automotive experience in vehicle service, diagnostics, repair and engineering.",
+  title: "About Our Automotive Workshop",
+  description: "Learn about Jhansi Automobiles Engineering Works in Visakhapatnam, with 30+ years of experience in vehicle service, diagnostics, repair and engineering.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Our Automotive Workshop",
+    description: "Learn about Jhansi Automobiles Engineering Works in Visakhapatnam, with 30+ years of experience in vehicle service, diagnostics, repair and engineering.",
+    url: "/about",
+  },
+  twitter: {
+    title: "About Our Automotive Workshop",
+    description: "Learn about Jhansi Automobiles Engineering Works in Visakhapatnam, with 30+ years of experience in vehicle service, diagnostics, repair and engineering.",
+  },
 };
 
 const pillars = [

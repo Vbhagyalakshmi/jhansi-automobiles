@@ -5,7 +5,7 @@ import { tel, bookingWhatsappUrl, img } from "@/lib/site-config";
 import Photo from "./Photo";
 import ServicesCarousel from "./ServicesCarousel";
 import Gallery from "./Gallery";
-import { AboutPreview, ContactCta, Process, Strip, Why } from "./sections";
+import { AboutPreview, ContactCta, Process, Reveal, Strip, Why } from "./sections";
 import { ArrowIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
 function Hero() {
@@ -44,12 +44,41 @@ function GalleryPreview() {
   );
 }
 
+function VehicleSpecialization() {
+  return (
+    <section className="sec alt" aria-labelledby="vehicle-specialization-title">
+      <div className="wrap two">
+        <Reveal>
+          <p className="eyebrow">Vehicle Expertise</p>
+          <h2 id="vehicle-specialization-title">SPECIALISTS IN MITSUBISHI PAJERO, PAJERO SPORT &amp; MODERN VEHICLES</h2>
+          <p className="body-copy">
+            Expert automobile engineering and vehicle servicing for Mitsubishi Pajero, Pajero Sport, and modern-generation vehicles. Our workshop focuses on careful diagnostics, engine and mechanical repairs, maintenance, and reliable service tailored to each vehicle.
+          </p>
+          <ul className="specialty-list">
+            <li>Mitsubishi Pajero</li>
+            <li>Mitsubishi Pajero Sport</li>
+            <li>Modern-generation SUVs and passenger vehicles</li>
+          </ul>
+          <p className="body-copy specialty-note">
+            Ask us about other vehicle models to confirm workshop support for your vehicle.
+          </p>
+          <Link className="btn" href="/contact">CONTACT US<ArrowIcon /></Link>
+        </Reveal>
+        <div className="about-img specialty-img">
+          <Photo src="/images/workshop/workshop-vehicles.webp" alt="SUVs inside the Jhansi Automobiles Engineering Works workshop" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Site() {
   return (
     <>
       <Hero />
       <Strip />
       <AboutPreview />
+      <VehicleSpecialization />
       <ServicesCarousel />
       <Why />
       <Process />

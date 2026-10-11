@@ -1,5 +1,10 @@
-import { siteConfig, navLinks } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap() {
-  return navLinks.map(({ href }) => ({ url: `${siteConfig.url}${href === "/" ? "" : href}`, lastModified: new Date() }));
+  const lastModified = new Date("2026-10-11T00:00:00.000Z");
+
+  return ["/", "/about", "/services", "/workshop", "/gallery", "/contact"].map((path) => ({
+    url: new URL(path, siteConfig.url).toString(),
+    lastModified,
+  }));
 }

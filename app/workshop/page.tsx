@@ -5,9 +5,18 @@ import WorkshopVisual from "@/components/WorkshopVisual";
 import { ContactCta, Process, Reveal } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "Our Workshop",
+  title: "Our Automobile Engineering Workshop",
   description: "Inside the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — diagnostics, mechanical engineering, maintenance and repair backed by 30+ years of experience.",
   alternates: { canonical: "/workshop" },
+  openGraph: {
+    title: "Our Automobile Engineering Workshop",
+    description: "Inside the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — diagnostics, mechanical engineering, maintenance and repair backed by 30+ years of experience.",
+    url: "/workshop",
+  },
+  twitter: {
+    title: "Our Automobile Engineering Workshop",
+    description: "Inside the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — diagnostics, mechanical engineering, maintenance and repair backed by 30+ years of experience.",
+  },
 };
 
 const capabilities = [

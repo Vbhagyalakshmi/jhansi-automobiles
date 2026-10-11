@@ -4,9 +4,18 @@ import Gallery from "@/components/Gallery";
 import { ContactCta } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "Gallery",
+  title: "Workshop Gallery",
   description: "Photos from the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — service bays, diagnostics, engine repair and more.",
   alternates: { canonical: "/gallery" },
+  openGraph: {
+    title: "Workshop Gallery",
+    description: "Photos from the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — service bays, diagnostics, engine repair and more.",
+    url: "/gallery",
+  },
+  twitter: {
+    title: "Workshop Gallery",
+    description: "Photos from the Jhansi Automobiles Engineering Works workshop in Visakhapatnam — service bays, diagnostics, engine repair and more.",
+  },
 };
 
 export default function GalleryPage() {

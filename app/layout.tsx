@@ -8,16 +8,16 @@ import "./globals.css";
 const head = Montserrat({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-head" });
 const body = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-body" });
 
-const title = "Jhansi Automobiles Engineering Works | Automobile Service & Engineering";
+const title = "Mitsubishi Pajero Specialist & Auto Repairs | Jhansi Automobiles";
 const description =
-  "Jhansi Automobiles Engineering Works in Visakhapatnam — professional automobile service, diagnostics, repair and engineering solutions backed by 30+ years of experience.";
+  "Mitsubishi Pajero and Pajero Sport service, automobile engineering, repairs and modern vehicle diagnostics in Visakhapatnam. Backed by 30+ years of experience.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: title, template: `%s | ${siteConfig.businessName}` },
   description,
-  alternates: { canonical: "/" },
-  openGraph: { title, description, type: "website", locale: "en_IN", siteName: siteConfig.businessName, images: ["/images/hero-workshop.png"] },
+  alternates: { canonical: `${siteConfig.url}/` },
+  openGraph: { title, description, url: `${siteConfig.url}/`, type: "website", locale: "en_IN", siteName: siteConfig.businessName, images: ["/images/hero-workshop.png"] },
   twitter: { card: "summary_large_image", title, description, images: ["/images/hero-workshop.png"] },
 };
 
