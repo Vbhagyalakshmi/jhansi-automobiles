@@ -1,5 +1,9 @@
 {
   "/icon.png/route": "app/icon.png/route.js",
   "/page": "app/page.js",
-  "/services/page": "app/services/page.js"
+  "/contact/page": "app/contact/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/services/page": "app/services/page.js",
+  "/about/page": "app/about/page.js",
+  "/workshop/page": "app/workshop/page.js"
 }

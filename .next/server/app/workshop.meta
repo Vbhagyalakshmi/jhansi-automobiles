@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/workshop/layout,_N_T_/workshop/page,_N_T_/workshop"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/5aa7d320e201984027c1343eb7bc0405855e176982f89849841bba18cde184a4/$/workshop",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/workshop/page"
+    },
+    "isFallback": false
+  }
+}
