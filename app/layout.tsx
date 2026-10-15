@@ -8,7 +8,7 @@ import "./globals.css";
 const head = Montserrat({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-head" });
 const body = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-body" });
 
-const title = "Mitsubishi Pajero Specialist & Auto Repairs | Jhansi Automobiles";
+const title = "Car Service Center with Quality Service from 30+ years | Jhansi Automobiles";
 const description =
   "Mitsubishi Pajero and Pajero Sport service, automobile engineering, repairs and modern vehicle diagnostics in Visakhapatnam. Backed by 30+ years of experience.";
 
